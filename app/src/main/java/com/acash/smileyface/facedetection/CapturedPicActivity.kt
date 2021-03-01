@@ -10,7 +10,7 @@ class CapturedPicActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_captured_pic)
-        capturedImg.setImageBitmap(FaceAnalyzer.bitmap)
+        capturedImg.setImageURI(FaceAnalyzer.uri)
 
         newPicButton.setOnClickListener{
             startActivity(Intent(this,FaceDetectionActivity::class.java)

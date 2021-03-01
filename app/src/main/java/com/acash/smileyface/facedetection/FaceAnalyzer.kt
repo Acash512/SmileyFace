@@ -5,8 +5,6 @@ import android.app.Activity
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
@@ -35,7 +33,7 @@ class FaceAnalyzer(private val context: Context, private val imageCapture: Image
     ImageAnalysis.Analyzer {
 
     companion object{
-        lateinit var bitmap: Bitmap
+        lateinit var uri: Uri
     }
 
     private val faceDetector = FaceDetection.getClient(
@@ -87,7 +85,7 @@ class FaceAnalyzer(private val context: Context, private val imageCapture: Image
                         val mediaScanIntent = Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE,outputDetails.first)
                         context.sendBroadcast(mediaScanIntent)
                     }
-                    bitmap = BitmapFactory.decodeFile(outputDetails.first.path)
+                    uri = outputDetails.first
                     context.startActivity(Intent(context, CapturedPicActivity::class.java)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK))
                 }
