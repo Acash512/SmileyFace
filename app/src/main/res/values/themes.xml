@@ -14,4 +14,10 @@
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/black</item>
     </style>
+
+    <style name="SplashActivityTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
+    <style name="CircularImgView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10%</item>
+    </style>
 </resources>

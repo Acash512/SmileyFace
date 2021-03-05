@@ -14,10 +14,7 @@ class MainActivity() : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         object:CountDownTimer(5000, 1000){
-
-            override fun onTick(millisUntilFinished: Long) {
-                countDownTv.text = "Capturing Smiles since 00:0${millisUntilFinished/1000}"
-            }
+            override fun onTick(millisUntilFinished: Long) {}
 
             override fun onFinish() {
                 this@MainActivity.startActivity(Intent(this@MainActivity, FaceDetectionActivity::class.java)

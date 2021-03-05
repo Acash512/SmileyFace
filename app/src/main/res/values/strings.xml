@@ -4,4 +4,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="perfect">PERFECT</string>
     <string name="smile_harder">Smile to reveal your inner beauty pal</string>
+    <string name="take_another_pic">Take Another Pic</string>
+    <string name="here_to_capture_smiles">Here to capture smiles</string>
 </resources>
